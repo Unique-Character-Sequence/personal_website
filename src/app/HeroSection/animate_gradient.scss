@@ -1,0 +1,16 @@
+@keyframes gradientAnimation {
+    0% {
+        background-position: 100% 0%;
+    }
+    50% {
+        background-position: 0% 100%;
+    }
+    100% {
+        background-position: 100% 0%;
+    }
+}
+
+.animate-gradient {
+    background-size: 300% 100%;
+    animation: gradientAnimation 3.5s ease-in-out infinite;
+}
