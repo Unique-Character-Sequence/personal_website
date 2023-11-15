@@ -15,26 +15,27 @@ const HeroSection = () => {
                                 Hello, I&apos;m{" "}
                             </div>
                             <TypeAnimation
-                                className="whitespace-nowrap relative sm:absolute z-10"
+                                className="sm:whitespace-nowrap absolute z-10"
                                 sequence={[
                                     // Same substring at the start will only be typed out once, initially
                                     'Pilici Rustam',
-                                    1000, // wait 1s before replacing "Mice" with "Hamsters"
+                                    1500, // wait 1s before replacing "Mice" with "Hamsters"
                                     'Frontend Developer',
-                                    1000,
-                                    'Web Developer',
-                                    1000,
+                                    900,
                                     'UI/UX Developer',
-                                    1000,
+                                    900,
+                                    'your ideal hire!',
+                                    4000,
                                 ]}
                                 wrapper="span"
                                 speed={50}
                                 repeat={Infinity}
                             />
+                            <div className="mb-24 relative min-[360px]:mb-14 sm:mb-20 lg:mb-24" />
                         </h1>
                     </div>
-                    <p className="text-[#ADB7BE] text-sm sm:text-lg lg:text-xl mb-6 mt-4 sm:mt-16 lg:mt-20">
-                        And I am your perfect match, consectetur adipisicing elit.
+                    <p className="text-[#ADB7BE] text-sm sm:text-lg lg:text-xl mb-6">
+                        I have done 999 years course, consectetur adipisicing elit.
                         Possimus similique asperiores, molestias temporibus, nullvel,
                         saepe sint assumenda nostrum iste eveniet porro modi voluptatibus
                         velit a veniam? Ut, repudiandae voluptas.
