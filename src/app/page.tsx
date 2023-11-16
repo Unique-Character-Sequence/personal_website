@@ -1,5 +1,5 @@
-import HeroSection from './HeroSection/HeroSection';
-import Navbar from './Navbar/Navbar';
+import HeroSection from './components/HeroSection/HeroSection';
+import Navbar from './components/Navbar/Navbar';
 const Home = () => {
   return (
     <main className="flex min-h-screen flex-col bg-[#121212]">

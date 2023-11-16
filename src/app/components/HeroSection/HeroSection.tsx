@@ -10,7 +10,7 @@ const HeroSection = () => {
             <div className="grid grid-cols-1 sm:grid-cols-12">
                 <div className="col-span-7 place-self-center text-left">
                     <div>
-                        <h1 className="text-white mb-4 text-3xl sm:text-5xl lg:text-6xl font-extrabold">
+                        <h1 className="text-white mb-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold">
                             <div className="mb-2 animate-gradient text-transparent bg-clip-text bg-gradient-to-br from-teal-200 via-indigo-400 via-40% to-teal-200">
                                 Hello, I&apos;m{" "}
                             </div>
@@ -19,8 +19,8 @@ const HeroSection = () => {
                                 sequence={[
                                     // Same substring at the start will only be typed out once, initially
                                     'Pilici Rustam',
-                                    1500, // wait 1s before replacing "Mice" with "Hamsters"
-                                    'Frontend Developer',
+                                    2000, // wait 1s before replacing "Mice" with "Hamsters"
+                                    'ReactJS Developer',
                                     900,
                                     'UI/UX Developer',
                                     900,
@@ -35,10 +35,8 @@ const HeroSection = () => {
                         </h1>
                     </div>
                     <p className="text-[#ADB7BE] text-sm sm:text-lg lg:text-xl mb-6">
-                        I have done 999 years course, consectetur adipisicing elit.
-                        Possimus similique asperiores, molestias temporibus, nullvel,
-                        saepe sint assumenda nostrum iste eveniet porro modi voluptatibus
-                        velit a veniam? Ut, repudiandae voluptas.
+                        I have done 999 years course, i know typescript and stuff.
+                        {/* TODO: Кнопки снизу тут рановато так-то стоят. Сначала флексишь, потом просишь нанять  */}
                     </p>
                     <div>
                         <button className="sm:w-fit w-full rounded-full px-6 py-3 mr-4 transition-all duration-200 bg-center bg-[length:300%_100%] hover:bg-right bg-gradient-to-br from-indigo-500 via-red-600 via-75% hover:via-45% to-yellow-400 text-white">Hire Me</button>

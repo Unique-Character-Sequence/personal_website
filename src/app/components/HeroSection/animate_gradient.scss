@@ -1,0 +1,32 @@
+@keyframes gradientAnimation {
+    0% {
+        background-position: 100% 0%;
+    }
+    50% {
+        background-position: 0% 100%;
+    }
+    100% {
+        background-position: 100% 0%;
+    }
+}
+
+.animate-gradient {
+    background-size: 300% 100%;
+    animation: gradientAnimation 3.5s ease-in-out infinite;
+}
+
+@keyframes heroAnimation {
+    0% {
+        transform: rotate(0deg) translate(-50%, -50%);
+    }
+    50% {
+        transform: rotate(6deg) scale(1.05) translate(-50%, -50%);
+    }
+    100% {
+        transform: rotate(0deg) translate(-50%, -50%);
+    }
+}
+
+.animate_hero {
+    animation: heroAnimation 1.4s ease-in-out;
+}
