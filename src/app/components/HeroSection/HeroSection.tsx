@@ -35,7 +35,7 @@ const HeroSection = () => {
                         </h1>
                     </div>
                     <p className="text-[#ADB7BE] text-sm sm:text-lg lg:text-xl mb-6">
-                        I have done 999 years course, i know typescript and stuff.
+                        Still looking for a skilled React developer?<br />Your search ends here.
                         {/* TODO: Кнопки снизу тут рановато так-то стоят. Сначала флексишь, потом просишь нанять  */}
                     </p>
                     <div>
