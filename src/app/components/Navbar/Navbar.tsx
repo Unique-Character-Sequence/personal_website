@@ -18,6 +18,8 @@ const Navbar = () => {
         setPrevScrollPos((prevScrollPos) => {
             const currentScrollPos = window.scrollY;
             if (currentScrollPos > prevScrollPos) {
+                console.log("qwe");
+
                 setVisible(false);
                 setIsMenuOpen(false);
             } else {
@@ -60,9 +62,7 @@ const Navbar = () => {
                     : <Bars3Icon className="w-10 h-10 sm:hidden text-neutral-300 cursor-pointer" onClick={() => handleHamClick(true)} />
                 }
             </div>
-
-
-            <div className={`${isMenuOpen === false && "hidden"} transition-all duration-400 text-neutral-300 flex flex-col items-center`}>
+            <div className={`${isMenuOpen === false && "hidden"} sm:hidden absolute w-full  bg-[#121212] bg-opacity-95 z-20 text-neutral-300 flex flex-col items-center`}>
                 <Link className={hoverMenuItem + " text-2xl"} href={"#about"}>About</Link>
                 <Link className={hoverMenuItem + " " + "py-8 text-2xl"} href={"#projects"}>Projects</Link>
                 <Link className={hoverMenuItem + " " + "pb-2 text-2xl"} href={"#contacts"}>Contacts</Link>
