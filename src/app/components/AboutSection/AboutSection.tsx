@@ -121,7 +121,7 @@ const AboutSection = () => {
                     </div>
 
                     <p className="text-lg">
-                        Invest in me today and secure a powerful asset for lasting success in a competitive market.
+                        Hire me today and secure a powerful asset for lasting success in a competitive market.
                     </p>
 
                     <p className="text-lg mt-4">
