@@ -3,7 +3,7 @@ import Image from 'next/image'
 const AboutSection = () => {
     return (
         <section className='text-white mt-6'>
-            <div className="px-4 lg:px-16 xl:px-[8vw] text-justify text-md md:text-lg">
+            <div className="px-4 lg:px-16 xl:px-[8vw] text-md md:text-lg">
                 <div className='flex justify-center items-center'>
                     <div className='w-11/12 bg-neutral-400 h-[2px]' />
                     <h1 className='w-full mx-8 text-center py-10 font-bold text-2xl'>
@@ -14,7 +14,7 @@ const AboutSection = () => {
 
                 <div className='lg:h-[380px]'>
                     <Image
-                        className="rounded-xl mr-4 w-44 md:w-60 float-left"
+                        className="rounded-xl shadow-lg mr-4 w-[28vw] sm:w-44 md:w-60 float-left"
                         src="/images/me.png"
                         alt="my memoji"
                         height={280}
@@ -36,8 +36,8 @@ const AboutSection = () => {
                     </p>
                 </div>
 
-                <div className="bg-gray-900 bg-opacity-80 p-6 rounded-lg shadow-md  mt-3 md:mt-4 lg:mt-5">
-                    <h1 className="text-3xl font-extrabold text-center mb-6 text-yellow-300">🚀 Recent Achievements</h1>
+                <div className="bg-gray-900 bg-opacity-80 p-6 rounded-lg shadow-md mt-3 md:mt-4 lg:mt-5">
+                    <h1 className="text-2xl md:text-3xl font-extrabold text-center mb-6 text-yellow-300">🚀 Recent Achievements</h1>
 
                     <div className="text-white">
                         <b>Productivity</b>
@@ -73,29 +73,29 @@ const AboutSection = () => {
                         🌟 Hiring me means:
                     </p>
 
-                    <div className="flex items-center space-x-4 mb-6">
-                        <div className="w-6 h-6 stroke-black bg-green-600 rounded-full flex items-center justify-center text-white">
+                    <div className="space-x-4 mb-6">
+                        <div className="w-6 h-6 absolute stroke-black bg-green-600 rounded-full flex items-center justify-center text-white">
                             <span className="font-bold">1</span>
                         </div>
-                        <p className="text-lg">
-                            Immediate boost in value and expertise to enhance front-end team performance.
+                        <p className="text-lg pl-5">
+                            Immediate boost for your front-end team performance.
                         </p>
                     </div>
 
-                    <div className="flex items-center space-x-4 mb-6">
-                        <div className="w-6 h-6 bg-green-600 rounded-full flex items-center justify-center text-white">
+                    <div className="space-x-4 mb-6">
+                        <div className="w-6 h-6 absolute bg-green-600 rounded-full flex items-center justify-center text-white">
                             <span className="font-bold">2</span>
                         </div>
-                        <p className="text-lg">
+                        <p className="text-lg pl-5">
                             The assurance of a future <strong>loyal middle developer</strong>.
                         </p>
                     </div>
 
-                    <div className="flex items-center space-x-4 mb-6">
-                        <div className="w-6 h-6 bg-green-600 rounded-full flex items-center justify-center text-white">
+                    <div className="space-x-4 mb-6">
+                        <div className="w-6 h-6 absolute bg-green-600 rounded-full flex items-center justify-center text-white">
                             <span className="font-bold">3</span>
                         </div>
-                        <p className="text-lg">
+                        <p className="text-lg pl-5">
                             Securing potential <strong>dedicated senior leader</strong>.
                         </p>
                     </div>
