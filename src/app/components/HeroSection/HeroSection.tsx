@@ -47,7 +47,7 @@ const HeroSection = () => {
                 <div className="col-span-5 place-self-center mt-4 lg:mt-0">
                     <div className="rounded-full bg-[#181818] sm:ml-12 w-[120px] h-[120px] sm:w-[250px] sm:h-[250px] lg:w-[312px] lg:h-[312px] relative">
                         <Image
-                            className="absolute w-[95px] sm:w-[200px] lg:w-[250px] hover:scale-105 hover:rotate-6 transition duration-200 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                            className="absolute h-auto w-[95px] sm:w-[200px] lg:w-[250px] hover:scale-105 hover:rotate-6 transition duration-200 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                             src="/images/Memoji_Boy.png"
                             alt="my memoji"
                             height={250}

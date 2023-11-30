@@ -18,8 +18,6 @@ const Navbar = () => {
         setPrevScrollPos((prevScrollPos) => {
             const currentScrollPos = window.scrollY;
             if (currentScrollPos > prevScrollPos) {
-                console.log("qwe");
-
                 setVisible(false);
                 setIsMenuOpen(false);
             } else {

@@ -1,6 +1,20 @@
+"use client";
+
 import Image from 'next/image'
+import { useState, useTransition } from 'react';
+import Link from 'next/link';
+import TabButton from './TabButton';
 
 const AboutSection = () => {
+    const [activeTab, setActiveTab] = useState("skills")
+    const [isPending, startTransition] = useTransition()
+    const handleTabChange = (id: string) => {
+        console.log(id)
+        startTransition(() => {
+            setActiveTab(id)
+        })
+    }
+
     return (
         <section className='text-white mt-6'>
             <div className="px-4 lg:px-16 xl:px-[8vw] text-md md:text-lg">
@@ -16,7 +30,7 @@ const AboutSection = () => {
                     <Image
                         className="rounded-xl shadow-lg mr-4 w-[28vw] sm:w-44 md:w-60 float-left"
                         src="/images/me.png"
-                        alt="my memoji"
+                        alt="my photo"
                         height={280}
                         width={280} />
                     <p>
@@ -24,7 +38,9 @@ const AboutSection = () => {
                     </p>
                     <br />
                     <p>
-                        Tired of the same old intros? Well, here&apos;s something different – I&apos;m not your typical <code>React Developer</code>. Yes, I bring hands-on experience with a diverse toolkit, including React, Redux, TypeScript, TailwindCSS, and more.
+                        Tired of the same old intros? Well, here&apos;s something different – I&apos;m not your typical
+                        <code> React Developer</code>. Yes, I bring hands-on experience with a diverse toolkit,
+                        <> including React, Redux, TypeScript, TailwindCSS, and <Link className='text-blue-500 hover:underline cursor-pointer' href={"#about"}>more</Link></>.
                     </p>
                     <br />
                     <p>
@@ -37,16 +53,23 @@ const AboutSection = () => {
                 </div>
 
                 <div className="bg-gray-900 bg-opacity-80 p-6 rounded-lg shadow-md mt-3 md:mt-4 lg:mt-5">
-                    <h1 className="text-2xl md:text-3xl font-extrabold text-center mb-6 text-yellow-300">🚀 Recent Achievements</h1>
+                    <Image
+                        className='absolute h-auto min-w-[65px] w-[12vw] md:w-[90px] lg:w-[95px] -translate-x-1/2 -translate-y-[52%] left-1/2'
+                        src="/images/push-pin-icon.png"
+                        alt="push pin"
+                        height={90}
+                        width={90}
+                    />
+                    <h1 className="text-2xl md:text-3xl font-extrabold text-center mb-6 mt-4 text-yellow-300">🚀 Recent Achievements</h1>
 
                     <div className="text-white">
                         <b>Productivity</b>
                         <ul className="list-disc pl-6 mt-2">
-                            <li className="mb-1.5">Achieved an impressive <strong className="text-green-500">~50%</strong> boost in average productivity, utilizing advanced time management techniques.</li>
-                            <li className="mb-1.5">Realized a significant <strong className="text-green-500">~20%</strong> acceleration in Redux development speed through a seamless transition to Redux Toolkit.</li>
-                            <li className="mb-1.5">Successfully achieved at least a <strong className="text-green-500">twofold</strong> improvement in reducing debugging time by leveraging ChatGPT for thorough code reviews.</li>
-                            <li className="mb-1.5">Optimized the construction of website layouts with and without pre-made designs by mastering Firefox Developer Edition tools.</li>
-                            <li className="mb-1.5">Methodically documented bugs, implemented solutions and valuable feature insights thus reducing future debugging time.</li>
+                            <li className="mb-2">Achieved an impressive <strong className="text-green-500">~50%</strong> boost in average productivity, utilizing advanced time management techniques.</li>
+                            <li className="mb-2">Realized a significant <strong className="text-green-500">~20%</strong> acceleration in Redux development speed through a seamless transition to Redux Toolkit.</li>
+                            <li className="mb-2">Successfully achieved at least a <strong className="text-green-500">twofold</strong> improvement in reducing debugging time by leveraging ChatGPT for thorough code reviews.</li>
+                            <li className="mb-2">Optimized the construction of website layouts with and without pre-made designs by mastering Firefox Developer Edition tools.</li>
+                            <li className="mb-2">Methodically documented bugs, implemented solutions and valuable feature insights thus reducing future debugging time.</li>
                         </ul>
                     </div>
 
@@ -59,13 +82,10 @@ const AboutSection = () => {
                         </ul>
                     </div>
                 </div>
-
-                <div className='flex flex-row mt-8'>
-                    <span className='mr-3 font-semibold hover:rext-white text-[#ADB7BE] border-b-2 border-purple-500'>
-                        Tech stack
-                    </span>
-                    <span className='mr-3'>Education</span>
-                    <span>Experience</span>
+                <div>
+                    <TabButton activeTab={activeTab} selectTab={handleTabChange}>Skills</TabButton>
+                    <TabButton activeTab={activeTab} selectTab={handleTabChange}>Education</TabButton>
+                    <TabButton activeTab={activeTab} selectTab={handleTabChange}>Experience</TabButton>
                 </div>
 
                 <div className="text-left mt-6 text-gray-300">
@@ -108,7 +128,6 @@ const AboutSection = () => {
                         And about salary expectations? Well, let&apos;s just say, my skills aren&apos;t the only thing growing every day! 💸
                     </p>
                 </div>
-
             </div>
         </section>
     )
