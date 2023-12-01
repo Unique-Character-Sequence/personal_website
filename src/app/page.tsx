@@ -7,8 +7,8 @@ const Home = () => {
       <Navbar />
       <div className="container mx-auto px-12 pt-4 sm:pt-16 pb-4 mt-10">
         <HeroSection />
-        <AboutSection />
       </div>
+      <AboutSection />
     </main>
   )
 };

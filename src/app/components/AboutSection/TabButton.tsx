@@ -1,6 +1,6 @@
 type props_I = { activeTab: string, selectTab: (tab: string) => void, children: string }
 
-const TabButton = ({ activeTab = "Skills", selectTab, children }: props_I) => {
+const TabButton = ({ activeTab = "Toolkit", selectTab, children }: props_I) => {
     const buttonClasses = activeTab.toLowerCase() === children.toLowerCase()
         ? "text-white border-b-2 border-purple-500"
         : "text-[#ADB7BE]"
