@@ -170,14 +170,14 @@ const AboutSection = () => {
                     <div className='w-11/12 bg-neutral-400 h-[2px]' />
                 </div>
 
-                <div className='md:h-[380px] mb-3 md:mb-4 lg:mb-5'>
+                <div className='md:min-h-[380px] md:max-h-[410px] mb-3 md:mb-6 lg:mb-5'>
                     <Image
                         className="rounded-xl shadow-lg mr-4 w-[28vw] sm:w-44 md:w-60 float-left"
                         src="/images/me.png"
                         alt="my photo"
                         height={280}
                         width={280} />
-                    <p>
+                    <p className="text-neutral-400">
                         <s>Hello, I&apos;m a React Developer specializing in...</s>
                     </p>
                     <br />
@@ -228,7 +228,7 @@ const AboutSection = () => {
                 </div>
 
                 <div>
-                    <div className="flex space-x-4 mb-4">
+                    <div className="flex space-x-4 mb-4 space-y-4 sm:space-y-0 flex-col sm:flex-row ">
                         <TabButton activeTab={activeTab} selectTab={handleTabChange}>Toolkit</TabButton>
                         <TabButton activeTab={activeTab} selectTab={handleTabChange}>Soft Skills</TabButton>
                         <TabButton activeTab={activeTab} selectTab={handleTabChange}>Education</TabButton>
