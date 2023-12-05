@@ -43,6 +43,7 @@ const TAB_DATA = [
                     <li className="mb-4">
                         <span className="text-xl font-bold">Other:</span>
                         <ul className="list-disc ml-4">
+                            <li>Git</li>
                             <li>Form Validation (Formik & Yup)</li>
                             <li>Local Storage</li>
                         </ul>
@@ -228,7 +229,7 @@ const AboutSection = () => {
                 </div>
 
                 <div>
-                    <div className="flex space-x-4 mb-4 space-y-4 sm:space-y-0 flex-col sm:flex-row ">
+                    <div className="flex space-x-4 mb-4 space-y-4 sm:space-y-0 flex-col sm:flex-row">
                         <TabButton activeTab={activeTab} selectTab={handleTabChange}>Toolkit</TabButton>
                         <TabButton activeTab={activeTab} selectTab={handleTabChange}>Soft Skills</TabButton>
                         <TabButton activeTab={activeTab} selectTab={handleTabChange}>Education</TabButton>
