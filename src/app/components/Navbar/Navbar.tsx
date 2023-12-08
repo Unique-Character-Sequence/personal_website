@@ -11,7 +11,7 @@ const hoverMenuItem = "hover:text-white transition duration-150"
 
 const Navbar = () => {
     const [prevScrollPos, setPrevScrollPos] = useState(0);
-    const [visible, setVisible] = useState(true)
+    const [visible, setVisible] = useState(false)
     const [isMenuOpen, setIsMenuOpen] = useState(false)
 
     const handleScrollNoThrottle = () => {
