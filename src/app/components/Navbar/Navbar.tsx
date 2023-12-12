@@ -44,7 +44,7 @@ const Navbar = () => {
                 <Link href={"/"} className="text-white">
                     <div className="relative bg-[#252525] w-[50px] h-[50px] flex justify-center rounded-full transition duration-200 hover:scale-105">
                         <Image
-                            src="/images/Memoji_Boy.png"
+                            src="/images/Memoji_Boy.webp"
                             alt="my memoji"
                             height={40}
                             width={40} />

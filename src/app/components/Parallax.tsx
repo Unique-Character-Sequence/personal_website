@@ -8,17 +8,18 @@ const ShootingStars = ({ numStars }: { numStars: number }) => {
 
     const stars = Array.from({ length: numStars }).map((_, index) => ({
         id: index,
-        x: Math.random() * 100 - 30, // Random horizontal position
-        y: Math.random() * 17, // Random vertical position
+        x: Math.random() * 100 - 100, // Random horizontal position
+        y: Math.random() * 7, // Random vertical position
+        radius: Math.random() * 2, // Random radius of the stars
     }));
 
     useEffect(() => {
         controls.start((i) => ({
             x: [`${stars[i].x}vw`, "150vw"], // Move from current x to 200vw (off the screen)
             y: [`${stars[i].y}vh`, "30vh"], // Move from current y to -100vh (off the screen)
-            opacity: [1, 0],
+            opacity: [1, 0.7],
             transition: {
-                duration: Math.random() + 3,
+                duration: Math.random() + 2.5,
                 ease: "linear",
                 repeat: Infinity,
                 repeatType: "loop"
@@ -41,7 +42,7 @@ const ShootingStars = ({ numStars }: { numStars: number }) => {
                 >
                     <svg viewBox="0 0 24 24" fill="white" width="24px" height="24px">
                         <path d="M0 0h24v24H0z" fill="none" />
-                        <circle cx="12" cy="12" r="1.3" />
+                        <circle cx="12" cy="12" r={star.radius} />
                     </svg>
                 </motion.div>
             ))}
@@ -55,7 +56,6 @@ const Parallax = () => {
         target: ref,
         offset: ["start start", "end start"]
     })
-    const sunY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"])
     const textY = useTransform(scrollYProgress, [0, 1], ["0%", "420%"])
     const mountainsY = useTransform(scrollYProgress, [0, 1], ["0%", "40%"])
     const girlY = useTransform(scrollYProgress, [0, 1], ["0%", "2%"])
@@ -71,28 +71,27 @@ const Parallax = () => {
                 text-white text-3xl sm:text-4xl md:text-5xl relative z-20">
                 You&apos;ve come so far
             </motion.h1>
-            <motion.div className="absolute inset-0 z-0"
+            <div className="absolute inset-0 z-0 bg-fixed"
                 style={{
-                    y: sunY,
-                    backgroundImage: `url(/images/layer-sun-nogaps.png)`,
+                    backgroundImage: `url(/images/layer-sun-nogaps.webp)`,
                     backgroundPosition: "bottom",
                     backgroundSize: "cover"
                 }} />
             <motion.div className="absolute inset-0 z-10"
                 style={{
                     y: mountainsY,
-                    backgroundImage: `url(/images/layer-mountains-nogaps.png)`,
+                    backgroundImage: `url(/images/layer-mountains-nogaps.webp)`,
                     backgroundPosition: "bottom",
                     backgroundSize: "cover",
                 }} />
             <motion.div className="absolute inset-0 z-20"
                 style={{
                     y: girlY,
-                    backgroundImage: `url(/images/Layer-girl.png)`,
+                    backgroundImage: `url(/images/Layer-girl.webp)`,
                     backgroundPosition: "bottom",
                     backgroundSize: "cover"
                 }} />
-            <ShootingStars numStars={14} />
+            <ShootingStars numStars={50} />
         </div>
     )
 }

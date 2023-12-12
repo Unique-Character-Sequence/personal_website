@@ -174,7 +174,7 @@ const AboutSection = () => {
                 <div className='md:min-h-[380px] md:max-h-[410px] mb-3 md:mb-6 lg:mb-5'>
                     <Image
                         className="rounded-xl shadow-lg mr-4 w-[28vw] sm:w-44 md:w-60 float-left"
-                        src="/images/me.png"
+                        src="/images/me.webp"
                         alt="my photo"
                         height={280}
                         width={280} />
@@ -200,7 +200,7 @@ const AboutSection = () => {
                 <div className="bg-gray-900 bg-opacity-80 p-6 rounded-lg shadow-md mb-8">
                     <Image
                         className='absolute h-auto min-w-[65px] w-[12vw] md:w-[90px] lg:w-[95px] -translate-x-1/2 -translate-y-[52%] left-1/2'
-                        src="/images/push-pin-icon.png"
+                        src="/images/push-pin-icon.webp"
                         alt="push pin"
                         height={90}
                         width={90}
