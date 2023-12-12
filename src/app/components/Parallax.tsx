@@ -58,7 +58,7 @@ const Parallax = () => {
     })
     const textY = useTransform(scrollYProgress, [0, 1], ["0%", "420%"])
     const mountainsY = useTransform(scrollYProgress, [0, 1], ["0%", "40%"])
-    const girlY = useTransform(scrollYProgress, [0, 1], ["0%", "2%"])
+    const girlY = useTransform(scrollYProgress, [0, 1], ["0%", "12%"])
 
     return (
         <div
