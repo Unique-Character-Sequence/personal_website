@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 const HeroSection = () => {
     return (
         <section>
-            <div className="grid grid-cols-12 sm:grid-cols-12 h-screen">
+            <div className="grid grid-cols-12 sm:grid-cols-12">
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}

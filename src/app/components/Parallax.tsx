@@ -61,16 +61,16 @@ const Parallax = () => {
     const girlY = useTransform(scrollYProgress, [0, 1], ["0%", "12%"])
 
     return (
-        <div
+        <section
             ref={ref}
             className="w-full h-screen overflow-hidden relative grid place-items-center">
-            <motion.h1
+            {/* <motion.h1
                 style={{ y: textY }}
                 className="font-bold
                 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]
                 text-white text-3xl sm:text-4xl md:text-5xl relative z-20">
                 You&apos;ve come so far
-            </motion.h1>
+            </motion.h1> */}
             <div className="absolute inset-0 z-0 bg-fixed"
                 style={{
                     backgroundImage: `url(/images/layer-sun-nogaps.webp)`,
@@ -91,8 +91,8 @@ const Parallax = () => {
                     backgroundPosition: "bottom",
                     backgroundSize: "cover"
                 }} />
-            <ShootingStars numStars={50} />
-        </div>
+            <ShootingStars numStars={30} />
+        </section>
     )
 }
 
