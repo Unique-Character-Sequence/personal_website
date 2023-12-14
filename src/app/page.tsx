@@ -10,9 +10,7 @@ const Home = () => {
     <main className="flex min-h-screen flex-col bg-[#121212]">
       <Parallax />
       <Navbar />
-      <div className="container mx-auto px-12 pt-4 sm:pt-16 pb-4 mt-10">
-        <HeroSection />
-      </div>
+      <HeroSection />
       <AboutSection />
       <ProjectsSection />
       <ContactsSection />

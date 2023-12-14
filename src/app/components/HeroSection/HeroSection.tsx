@@ -4,17 +4,19 @@ import Image from "next/image";
 import "./animate_gradient.scss";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
+import { Suspense, lazy } from "react";
 
 const HeroSection = () => {
+  const Spline = lazy(() => import("@splinetool/react-spline"));
   return (
-    <section className="h-screen">
+    <section className="container mx-auto px-12 pt-4 sm:pt-16 pb-4 mt-10">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
         className="grid grid-cols-12"
       >
-        <div className="col-span-7 place-self-center text-left mt-20">
+        <div className="col-span-7 place-self-center text-left mt-12">
           <div>
             <h1 className="text-white mb-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold">
               <div className="mb-2 animate-gradient text-transparent bg-clip-text bg-gradient-to-br from-teal-200 via-indigo-400 via-40% to-teal-200">
@@ -79,6 +81,14 @@ const HeroSection = () => {
           </button>
         </div>
       </motion.div>
+      <Suspense fallback={<h1>Loading...</h1>}>
+        <Spline
+          className="mt-10 -mb-20"
+          onLoad={(spline) => spline.setZoom(1.6)}
+          style={{ height: "58vw" }}
+          scene="https://prod.spline.design/F7NAK5FM4CFs81Az/scene.splinecode"
+        />
+      </Suspense>
     </section>
   );
 };

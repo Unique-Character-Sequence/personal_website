@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
+    "@splinetool/react-spline": "^2.2.6",
+    "@splinetool/runtime": "^0.9.522",
     "framer-motion": "^10.16.14",
     "next": "14.0.1",
     "react": "^18",

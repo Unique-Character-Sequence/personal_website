@@ -178,7 +178,7 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="text-white mt-6">
+    <section className="text-white">
       <div className="px-2 sm:px-8 md:px-10 lg:px-16 xl:px-[8vw] text-md md:text-lg">
         <div className="flex justify-center items-center">
           <div className="w-11/12 bg-neutral-400 h-[2px]" />
