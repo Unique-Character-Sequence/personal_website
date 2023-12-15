@@ -81,7 +81,7 @@ const HeroSection = () => {
           </button>
         </div>
       </motion.div>
-      <div className="relative -top-60 z-0">
+      <div className="relative sm:-top-60 z-0">
         <Suspense
           fallback={
             <div className="h-[58vw] grid place-items-center text-white text-3xl">
@@ -90,9 +90,8 @@ const HeroSection = () => {
           }
         >
           <Spline
-            className="mt-10 -mb-20"
             onLoad={(spline) => spline.setZoom(0.9)}
-            style={{ height: "65vw", maxHeight: "768px" }}
+            style={{ height: "65vw", maxHeight: "768px"}}
             scene="https://prod.spline.design/QgLbeGh0yVtwzOVk/scene.splinecode"
           />
         </Suspense>
