@@ -10,7 +10,7 @@ const ShootingStars = ({ numStars }: { numStars: number }) => {
     id: index,
     x: Math.random() * 100 - 100, // Random horizontal position
     y: Math.random() * 7, // Random vertical position
-    radius: Math.random() * 2, // Random radius of the stars
+    radius: parseFloat((Math.random() * 2).toFixed(2)), // Random radius of the stars
   }));
 
   useEffect(() => {

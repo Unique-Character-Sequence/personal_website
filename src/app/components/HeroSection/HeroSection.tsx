@@ -9,14 +9,14 @@ import { Suspense, lazy } from "react";
 const HeroSection = () => {
   const Spline = lazy(() => import("@splinetool/react-spline"));
   return (
-    <section className="container mx-auto px-12 pt-4 sm:pt-16 pb-4 mt-10">
+    <section className="container mx-auto px-12 pt-4 sm:pt-16 pb-4">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="grid grid-cols-12"
+        className="grid grid-cols-12 relative z-10"
       >
-        <div className="col-span-7 place-self-center text-left mt-12">
+        <div className="col-span-7 text-left mt-12">
           <div>
             <h1 className="text-white mb-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold">
               <div className="mb-2 animate-gradient text-transparent bg-clip-text bg-gradient-to-br from-teal-200 via-indigo-400 via-40% to-teal-200">
@@ -81,14 +81,37 @@ const HeroSection = () => {
           </button>
         </div>
       </motion.div>
-      <Suspense fallback={<h1>Loading...</h1>}>
+      <div className="relative -top-60 z-0">
+        <Suspense
+          fallback={
+            <div className="h-[58vw] grid place-items-center text-white text-3xl">
+              Loading...
+            </div>
+          }
+        >
+          <Spline
+            className="mt-10 -mb-20"
+            onLoad={(spline) => spline.setZoom(0.9)}
+            style={{ height: "65vw", maxHeight: "768px" }}
+            scene="https://prod.spline.design/QgLbeGh0yVtwzOVk/scene.splinecode"
+          />
+        </Suspense>
+      </div>
+
+      {/* <Suspense
+        fallback={
+          <div className="h-[58vw] grid place-items-center text-white text-3xl">
+            Loading...
+          </div>
+        }
+      >
         <Spline
           className="mt-10 -mb-20"
           onLoad={(spline) => spline.setZoom(1.6)}
-          style={{ height: "58vw" }}
+          style={{ height: "65vw", maxHeight: "768px" }}
           scene="https://prod.spline.design/F7NAK5FM4CFs81Az/scene.splinecode"
         />
-      </Suspense>
+      </Suspense> */}
     </section>
   );
 };
